@@ -9,4 +9,5 @@ api
 
 const server = http.createServer(api);
 
-server.listen(console.log(`API Listenning on port 3000`));
+server.listen(process.env.PORT || 3000)
+console.log(`API Listenning on port 3000`);
