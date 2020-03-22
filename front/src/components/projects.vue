@@ -1,6 +1,6 @@
 <template>
   <section>
-    <h1 class="home">Welcome to Thomas Pennamen's portfolio</h1>
+    <h1>List of my projects</h1>
   </section>
 </template>
 

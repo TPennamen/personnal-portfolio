@@ -1,8 +1,10 @@
 import Vue from "vue";
 import Router from "vue-router";
 
-import Game from "@/views/game";
-import Wizard from "@/views/wizard";
+import Home from "@/components/home";
+import About from "@/components/about";
+import Projects from "@/components/projects";
+import Contact from "@/components/contact";
 
 Vue.use(Router);
 
@@ -11,13 +13,23 @@ export default new Router({
     routes: [
         {
             path: "/",
-            name: "game",
-            component: Game
+            name: "home",
+            component: Home
         },
         {
-            path: "/wizard",
-            name: "wizard",
-            component: Wizard
+            path: "/about",
+            name: "about",
+            component: About
+        },
+        {
+            path: "/projects",
+            name: "projects",
+            component: Projects
+        },
+        {
+            path: "/contact",
+            name: "contact",
+            component: Contact
         }
     ]
 });
