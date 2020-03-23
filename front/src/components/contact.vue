@@ -5,10 +5,10 @@
         <i class="mdi mdi-gmail"></i> thomas.pennamen@gmail.com
       </p>
       <p>
-        <i class="mdi mdi-gitlab"></i> Tazzz
+        <i class="mdi mdi-gitlab"></i> TPennamen
       </p>
       <p>
-        <i class="mdi mdi-github"></i> Tazzzzzzzzz9
+        <i class="mdi mdi-github"></i> TPennamen
       </p>
       <p>
         <i class="mdi mdi-linkedin"></i> thomas-pennamen-a67b96181
