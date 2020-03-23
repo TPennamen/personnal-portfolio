@@ -29,9 +29,11 @@ export default {
   methods: {
     menuToggle() {
       this.showMenu = !this.showMenu;
+      this.$emit("clicked", !this.showMenu)
     },
     closeMenu() {
       this.showMenu = false;
+      this.$emit("clicked", !this.showMenu)
     }
   }
 };

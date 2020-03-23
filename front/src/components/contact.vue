@@ -1,6 +1,5 @@
 <template>
   <section class="center">
-    <h1>Contact Page</h1>
     <div class="contact">
       <p>
         <i class="mdi mdi-gmail"></i> thomas.pennamen@gmail.com

@@ -12,7 +12,6 @@
     url("../../public/background.jpg");
   overflow: hidden;
 }
-
 .navbar {
   position: relative;
   float: right;
@@ -66,7 +65,17 @@
   justify-content: center;
   text-align: center;
   align-items: center;
-  animation: open forwards 1s;
+  animation: open-menu forwards 1s;
+}
+@keyframes open-menu {
+  0% {
+    opacity: 0;
+    transform: translate(0%, -50%);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
 }
 .fullPage .link {
   justify-content: center;
@@ -85,7 +94,10 @@
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 20px;
+  display: flex;
+  flex-direction: column;
 }
+
 .about p {
   opacity: 0;
   animation: open ease-in-out forwards 1s;
@@ -98,13 +110,13 @@
 }
 .contact {
   opacity: 0;
-  animation : open ease-in-out forwards 1s;
+  animation: open ease-in-out forwards 1s;
 }
 
 section .contact {
+  margin-top: 25vh;
   opacity: 0;
   animation: open ease-in-out forwards 1s;
-  animation-delay: 1s;
 }
 
 .logo {
@@ -119,7 +131,7 @@ section .contact {
 }
 .main {
   position: relative;
-  top: 100px;
+  top: 40px;
   width: 100%;
   height: 80%;
   justify-content: center;
@@ -134,13 +146,32 @@ section h1 {
 }
 .home {
   position: absolute;
-  opacity: 0;
   top: 50%;
   left: 50%;
-  font-size: 50px;
   transform: translate(-50%, -50%);
+}
+.home-title {
+  opacity: 0;
+  font-size: 50px;
   text-transform: uppercase;
   animation-delay: 1s;
+}
+.project-sender-button {
+  height: 5vh;
+  opacity: 0;
+  border: solid 1px white;
+  animation: open 1s forwards;
+  animation-delay: 1.5s;
+  cursor: pointer;
+}
+.project-sender-button:hover {
+  background-color: white;
+  box-shadow: 0 0 10px white;
+  color: black;
+  transition: 0.5s;
+}
+.project-sender-button p {
+  transform: translate(0, 50%);
 }
 @keyframes open {
   0% {
@@ -149,4 +180,103 @@ section h1 {
   100% {
     opacity: 1;
   }
+}
+button {
+  height: 20vh;
+  width: 20vh;
+  border-radius: 50%;
+  margin: 15px;
+  background: transparent;
+  outline: transparent;
+  border: transparent;
+  cursor: pointer;
+  animation: grow 1s forwards;
+  align-items: center;
+}
+
+button:hover {
+  background-color: white;
+  background-size: 200px;
+  box-shadow: 0 0 10px white, 0 0 80px white;
+  transition: 0.5s;
+}
+button img {
+  width: inherit;
+  max-width: 20vh;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+@keyframes grow {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 20vw;
+  }
+}
+.project-box {
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+  margin-top: 10vh;
+}
+@media (min-width: 700px) and (min-height: 500px) {
+  .project-introduction {
+    width: 50vw;
+    opacity: 0;
+    transform: translate(-20%, 0);
+    transition: 1s;
+  }
+  .project-box:hover .project-introduction {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+
+@media (max-width: 700px), (max-height: 500px) {
+  .project-introduction {
+    width: 50vw;
+    animation: open 1s forwards;
+  }
+  button {
+    width: 20vw;
+    animation: open 1s forwards;
+  }
+  .main {
+    height: 90vh;
+    position: absolute;
+    top: 40px;
+    overflow-y: scroll;
+    justify-content: initial;
+  }
+  .project-box {
+    flex-direction: column;
+    width: 80vw;
+    justify-content: center;
+    align-items: center;
+  }
+  .project-box:nth-child(3) {
+    flex-direction: column-reverse;
+  }
+  .center {
+    top: initial;
+    left: 10vw;
+    right: 10vw;
+    transform: initial;
+  }
+  .project-sender-button {
+    font-size: 10px;
+  }
+}
+.back-button {
+  opacity: 0;
+  top: 10vh;
+  color: color;
+  text-shadow: 0 0 2px white;
+  font-size: 15px;
+}
+.group-button:hover .back-button {
+  animation: open 1s forwards;
 }
